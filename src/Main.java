@@ -5,16 +5,9 @@ import java.util.Iterator;
  */
 public class Main {
     public static void main(String[] args) {
-        LinkedList<String> myLL = new LinkedList<>();
+        SequentialSearchST<String, String> st = new SequentialSearchST<>();
 
-        myLL.pushBack("name");
-        myLL.pushBack("is");
-        myLL.pushBack("Keith");
-        myLL.pushBack("Yong");
-        myLL.pushFront("My");
-
-        for (String s : myLL) {
-            System.out.println(s);
-        }
+        st.put("port", "1337");
+        System.out.println(st.get("port"));
     }
 }
