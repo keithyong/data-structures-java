@@ -5,21 +5,16 @@ import java.util.Iterator;
  */
 public class Main {
     public static void main(String[] args) {
-        ResizingArrayStack<Integer> ra_stack = new ResizingArrayStack<Integer>();
-        ra_stack.push(new Integer(2));
-        ra_stack.push(new Integer(5));
-        ra_stack.push(new Integer(7));
-        ra_stack.push(new Integer(3));
-        ra_stack.push(new Integer(5));
+        LinkedList<String> myLL = new LinkedList<>();
 
-        ra_stack.pop();
-        ra_stack.pop();
-        ra_stack.pop();
-        ra_stack.pop();
+        myLL.pushBack("name");
+        myLL.pushBack("is");
+        myLL.pushBack("Keith");
+        myLL.pushBack("Yong");
+        myLL.pushFront("My");
 
-        for (Iterator<Integer> it = ra_stack.iterator(); it.hasNext(); ){
-            System.out.println(it.next());
+        for (String s : myLL) {
+            System.out.println(s);
         }
-
     }
 }
