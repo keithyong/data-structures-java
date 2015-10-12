@@ -3,11 +3,8 @@ import java.util.Iterator;
 /**
  * Created by terda12 on 10/11/2015.
  */
-public class SequentialSearchST<Key, Value> {
-    LinkedList<Pair<Key, Value>> ll = new LinkedList<>();
-    SequentialSearchST() {
-
-    }
+public class SequentialSearchST<Key, Value> implements Iterable<Pair<Key, Value>> {
+    private LinkedList<Pair<Key, Value>> ll = new LinkedList<>();
 
     public void put(Key key, Value val) {
         // Search for the key. Update value if found; grow table if new.
@@ -31,5 +28,10 @@ public class SequentialSearchST<Key, Value> {
         }
 
         return null;
+    }
+
+    @Override
+    public Iterator<Pair<Key, Value>> iterator() {
+        return ll.iterator();
     }
 }

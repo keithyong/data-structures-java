@@ -8,6 +8,11 @@ public class Main {
         SequentialSearchST<String, String> st = new SequentialSearchST<>();
 
         st.put("port", "1337");
-        System.out.println(st.get("port"));
+        st.put("title", "My Application");
+        st.put("author", "Keith Yong");
+
+        for (Pair<String, String> p : st) {
+            System.out.println(p);
+        }
     }
 }
